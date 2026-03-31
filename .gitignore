@@ -1,0 +1,75 @@
+# =========================
+
+# Laravel
+
+# =========================
+
+/vendor/
+/node_modules/
+/public/storage
+/storage/*.key
+/storage/app/*
+!/storage/app/.gitignore
+/storage/framework/cache/*
+!/storage/framework/cache/.gitignore
+/storage/framework/sessions/*
+!/storage/framework/sessions/.gitignore
+/storage/framework/views/*
+!/storage/framework/views/.gitignore
+/storage/logs/*
+
+# .env files
+
+.env
+.env.*
+
+# Laravel Mix / Vite
+
+/public/hot
+/public/build
+/public/mix-manifest.json
+
+# PHPUnit
+
+.phpunit.result.cache
+
+# =========================
+
+# Docker
+
+# =========================
+
+docker/mysql/data/
+docker/mysql/data/*
+docker/mysql/logs/
+docker/mysql/logs/*
+docker/mysql/tmp/
+docker/mysql/tmp/*
+
+# Docker general
+
+*.log
+*.pid
+*.sock
+
+# =========================
+
+# OS / Editor
+
+# =========================
+
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+.vscode/
+.idea/
+
+# =========================
+
+# Git
+
+# =========================
+
+*.bak
+*.tmp
