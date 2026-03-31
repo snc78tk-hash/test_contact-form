@@ -9,56 +9,54 @@
   <link rel="stylesheet" href="{{ asset('css/sanitize.css') }}" />
   <link rel="stylesheet" href="{{ asset('css/confirm.css') }}" />
 </head>
-
 <body>
-  <header class="header">
-    <div class="header__inner">
-      <a class="header__logo" href="/">
-        Contact Form
-      </a>
-    </div>
-  </header>
+    <div class="container">
+        <h1>FashionablyLate</h1>
+        <h2>Confirm</h2>
+        <table>
+            <tr>
+                <th>お名前</th>
+                <td>{{ $data['name'] }}</td>
+            </tr>
+            <tr>
+                <th>性別</th>
+                <td>{{ $data['gender'] }}</td>
+            </tr>
+            <tr>
+                <th>メールアドレス</th>
+                <td>{{ $data['email'] }}</td>
+            </tr>
+            <tr>
+                <th>電話番号</th>
+                <td>{{ $data['phone'] }}</td>
+            </tr>
+            <tr>
+                <th>住所</th>
+                <td>{{ $data['address'] }}</td>
+            </tr>
+            <tr>
+                <th>建物名</th>
+                <td>{{ $data['building'] }}</td>
+            </tr>
+            <tr>
+                <th>お問い合わせの種類</th>
+                <td>{{ $data['inquiry_type'] }}</td>
+            </tr>
+            <tr>
+                <th>お問い合わせ内容</th>
+                <td>{!! nl2br(e($data['inquiry_content'])) !!}</td>
+            </tr>
+        </table>
 
-  <main>
-    <div class="confirm__content">
-      <div class="confirm__heading">
-        <h2>お問い合わせ内容確認</h2>
-      </div>
-      <form class="form">
-        <div class="confirm-table">
-          <table class="confirm-table__inner">
-            <tr class="confirm-table__row">
-              <th class="confirm-table__header">お名前</th>
-              <td class="confirm-table__text">
-                <input type="text" name="name" value="サンプルテキスト" />
-              </td>
-            </tr>
-            <tr class="confirm-table__row">
-              <th class="confirm-table__header">メールアドレス</th>
-              <td class="confirm-table__text">
-                <input type="email" name="email" value="サンプルテキスト" />
-              </td>
-            </tr>
-            <tr class="confirm-table__row">
-              <th class="confirm-table__header">電話番号</th>
-              <td class="confirm-table__text">
-                <input type="tel" name="tel" value="サンプルテキスト" />
-              </td>
-            </tr>
-            <tr class="confirm-table__row">
-              <th class="confirm-table__header">お問い合わせ内容</th>
-              <td class="confirm-table__text">
-                <input type="text" name="content" value="サンプルテキスト" />
-              </td>
-            </tr>
-          </table>
-        </div>
-        <div class="form__button">
-          <button class="form__button-submit" type="submit">送信</button>
-        </div>
-      </form>
+        <form action="{{ route('contact.send') }}" method="POST">
+            @csrf
+            {{-- ここに隠し項目としてデータを送信 --}}
+            @foreach ($data as $key => $value)
+                <input type="hidden" name="{{ $key }}" value="{{ $value }}">
+            @endforeach
+            <button type="submit" class="btn-submit">送信</button>
+            <a href="{{ route('contact.form') }}" class="btn-edit">修正</a>
+        </form>
     </div>
-  </main>
 </body>
-
 </html>

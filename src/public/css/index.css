@@ -1,86 +1,99 @@
-.header {
-    background: #000;
+body {
+    font-family: 'Georgia', serif;
+    background-color: #fff;
+    color: #7b6652;
+    margin: 0;
+    padding: 0;
 }
 
-.header__inner {
-    margin: 0 auto;
-    padding: 20px 15px;
-    max-width: 1230px;
+.container {
+    max-width: 600px;
+    margin: 40px auto;
+    padding: 0 15px;
 }
 
-.header__logo {
-    color: #fff;
-    text-decoration: none;
-    font-weight: bold;
-    font-size: 24px;
-}
-
-.contact-form__content {
-    margin: 0 auto;
-    padding: 30px 15px;
-    max-width: 1230px;
-}
-
-.contact-form__heading {
-    margin-bottom: 40px;
+h1 {
+    font-weight: normal;
+    font-size: 2rem;
     text-align: center;
+    margin-bottom: 5px;
 }
 
-.form {
-    margin: 0 auto;
-    width: 70%;
+h2 {
+    font-weight: normal;
+    font-size: 1.3rem;
     text-align: center;
+    margin-bottom: 30px;
 }
 
-.form__group {
+form {
+    width: 130%;
+}
+
+.form-group {
     display: flex;
     justify-content: space-between;
-    margin-bottom: 15px;
+    margin-bottom: 20px;
 }
 
-.form__label--required {
-    margin-left: 5px;
-    padding: 4px 6px;
-    border-radius: 3px;
-    background: #fafafa;
-    color: #aaa;
+.form-group label {
+    width: 200px;
+    font-size: 0.9rem;
+    color: #7b6652;
+    white-space: nowrap;
 }
 
-.form__error {
-    height: 20px;
-    color: #ff0000;
-    text-align: left;
+.required {
+    color: #f08080;
+    margin-left: 3px;
 }
 
-.form__input--text input,
-.form__input--textarea textarea {
-    padding: 10px;
-    width: 600px;
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group input[type="tel"],
+.form-group select,
+.form-group textarea {
+    flex: 1;
+    padding: 8px 10px;
     border: 1px solid #ddd;
     border-radius: 3px;
-
-    appearance: none;
+    font-size: 0.9rem;
+    color: #7b6652;
+    background-color: #f8f8f8;
 }
 
-.form__input--text input {
-    height: 40px;
+.form-group textarea {
+    resize: vertical;
 }
 
-.form__input--textarea textarea {
-    height: 180px;
-}
-
-.form__button {
-    margin-top: 30px;
-}
-
-.form__button-submit {
-    padding: 10px;
-    width: 30%;
-    height: 50px;
-    border: none;
-    border-radius: 3px;
-    background: #000;
-    color: #fff;
+.gender-group label {
+    margin-right: 15px;
+    font-weight: normal;
     cursor: pointer;
+}
+
+.gender-group input[type="radio"] {
+    margin-right: 4px;
+}
+
+.phone-group input[type="tel"] {
+    width: 60px;
+    text-align: center;
+}
+
+.submit-btn {
+    display: block;
+    margin: 0 auto;
+    background-color: #7b6652;
+    color: #fff;
+    border: none;
+    padding: 10px 25px;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 2px;
+    user-select: none;
+}
+
+.submit-btn:hover {
+    background-color: #6b5947;
 }

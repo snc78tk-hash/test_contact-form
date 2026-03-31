@@ -9,23 +9,10 @@
   <link rel="stylesheet" href="{{ asset('css/sanitize.css') }}" />
   <link rel="stylesheet" href="{{ asset('css/thanks.css') }}" />
 </head>
-
 <body>
-  <header class="header">
-    <div class="header__inner">
-      <a class="header__logo" href="/">
-        Contact Form
-      </a>
+    <div class="container">
+        <p class="message">お問い合わせありがとうございました</p>
+        <a href="{{ url('/') }}" class="btn-home">HOME</a>
     </div>
-  </header>
-
-  <main>
-    <div class="thanks__content">
-      <div class="thanks__heading">
-        <h2>お問い合わせありがとうございます</h2>
-      </div>
-    </div>
-  </main>
 </body>
-
 </html>

@@ -1,80 +1,80 @@
-.header {
-    background: #000;
+body {
+    font-family: "ヒラギノ角ゴシック", "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
+    background-color: #f7f5f2;
+    color: #6e6054;
+    margin: 0;
+    padding: 40px 0;
+    text-align: center;
 }
 
-.header__inner {
+.container {
+    width: 600px;
     margin: 0 auto;
-    padding: 20px 15px;
-    max-width: 1230px;
 }
 
-.header__logo {
-    color: #fff;
-    text-decoration: none;
-    font-weight: bold;
-    font-size: 24px;
+h1 {
+    font-weight: normal;
+    margin-bottom: 20px;
+    color: #8b7d6b;
 }
 
-.confirm__content {
-    margin: 0 auto;
-    padding: 30px 15px;
-    max-width: 1230px;
-}
-
-.confirm__heading {
+h2 {
+    font-weight: normal;
     margin-bottom: 40px;
-    text-align: center;
+    color: #8b7d6b;
 }
 
-.form {
-    margin: 0 auto;
-    width: 70%;
-}
-
-.confirm-table {
-    border: 1px solid #ddd;
-}
-
-.confirm-table__inner {
+table {
     width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 30px;
 }
 
-.confirm-table__header {
-    padding: 15px;
-    width: 20%;
-    border-bottom: 1px solid #ddd;
-    background-color: #eee;
-    font-weight: bold;
+th,
+td {
+    border: 1px solid #ddd3ca;
+    padding: 12px 15px;
+    vertical-align: top;
 }
 
-.confirm-table__text {
-    padding: 15px;
-    border-bottom: 1px solid #ddd;
-}
-
-.confirm-table__text input {
-    width: 100%;
-    outline: none;
-    border: none;
-}
-
-.confirm-table__row:last-child .confirm-table__header,
-.confirm-table__row:last-child .confirm-table__text {
-    border-bottom-width: 0;
-}
-
-.form__button {
-    margin-top: 30px;
-    text-align: center;
-}
-
-.form__button-submit {
-    padding: 10px;
-    width: 30%;
-    height: 50px;
-    border: none;
-    border-radius: 3px;
-    background: #000;
+th {
+    background-color: #b2a590;
     color: #fff;
+    text-align: left;
+    width: 150px;
+}
+
+td {
+    background-color: #fff;
+    color: #6e6054;
+}
+
+.btn-submit,
+.btn-edit {
+    background-color: #b2a590;
+    color: #fff;
+    border: none;
+    padding: 10px 25px;
+    font-size: 14px;
     cursor: pointer;
+    margin-right: 10px;
+    text-decoration: none;
+    border-radius: 3px;
+    display: inline-block;
+}
+
+.btn-edit {
+    background-color: transparent;
+    color: #6e6054;
+    border: none;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.btn-submit:hover {
+    background-color: #8b7d6b;
+}
+
+.btn-edit:hover {
+    color: #8b7d6b;
 }

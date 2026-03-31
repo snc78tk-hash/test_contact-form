@@ -17,3 +17,5 @@ Route::get('/', function () {
     return view('welcome');
 });
 Route::get('/', [ContactController::class, 'index']);
+Route::get('/contact/confirm', [ContactController::class, 'confirm'])->name('contact.confirm');
+Route::post('/contact/confirm', [ContactController::class, 'confirm'])->name('contact.confirm');
