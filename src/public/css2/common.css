@@ -1,0 +1,60 @@
+/* ヘッダー全体 */
+.header {
+    background: #f5f1ed;
+    /* 薄いベージュ */
+    border-bottom: 1px solid #e0dbd7;
+}
+
+/* 内側コンテナ */
+.header__inner {
+    margin: 0 auto;
+    padding: 15px 20px;
+    max-width: 1230px;
+}
+
+/* ヘッダー配置 */
+.header-utilities {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+}
+
+/* ロゴ（中央配置） */
+.header__logo {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #8b7f77;
+    text-decoration: none;
+    font-weight: normal;
+    font-size: 28px;
+    font-family: serif;
+}
+
+/* ナビ全体 */
+.header-utilities nav {
+    margin-left: auto;
+}
+
+/* ナビ */
+.header-nav {
+    display: flex;
+    align-items: center;
+}
+
+/* ログインリンク */
+.header-nav__link {
+    text-decoration: none;
+    font-size: 14px;
+    color: #b7a99f;
+    border: 1px solid #d8d2cd;
+    padding: 6px 16px;
+    border-radius: 4px;
+    background: #f5f1ed;
+}
+
+/* ホバー時 */
+.header-nav__link:hover {
+    background: #eae4df;
+}

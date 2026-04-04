@@ -1,0 +1,100 @@
+/* 全体背景 */
+body {
+    background: #e9e4df;
+    font-family: serif;
+    color: #6b5f55;
+}
+
+/* コンテンツ */
+.login-form__content {
+    margin: 0 auto;
+    padding: 60px 15px;
+    max-width: 1230px;
+}
+
+/* 見出し */
+.login-form__heading {
+    margin-bottom: 40px;
+    text-align: center;
+    font-size: 28px;
+    color: #7a6f66;
+}
+
+/* フォームカード */
+.form {
+    margin: 0 auto;
+    width: 400px;
+    padding: 40px 50px;
+    background: #ffffff;
+    border: 1px solid #d8d2cc;
+    border-radius: 8px;
+    text-align: left;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+/* 入力グループ */
+.form__group {
+    margin-bottom: 25px;
+}
+
+/* ラベル */
+.form__group-title {
+    margin-bottom: 8px;
+    font-size: 14px;
+    color: #7a6f66;
+}
+
+/* エラー */
+.form__error {
+    height: 20px;
+    color: #ff6b6b;
+    font-size: 12px;
+}
+
+/* 入力欄 */
+.form__input--text input {
+    padding: 12px;
+    width: 100%;
+    height: 42px;
+    border: none;
+    border-radius: 4px;
+    background: #f4f2f0;
+    font-size: 14px;
+    color: #555;
+
+    appearance: none;
+}
+
+/* プレースホルダー */
+.form__input--text input::placeholder {
+    color: #c0bbb6;
+}
+
+/* ボタン */
+.form__button {
+    margin-top: 30px;
+    text-align: center;
+}
+
+.form__button-submit {
+    padding: 10px;
+    width: 120px;
+    height: 40px;
+    border: none;
+    border-radius: 4px;
+    background: #7a6f66;
+    color: #fff;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.form__button-submit:hover {
+    opacity: 0.9;
+}
+
+/* registerリンク */
+.register__link {
+    margin-top: 20px;
+    text-align: center;
+    font-size: 14px;
+}

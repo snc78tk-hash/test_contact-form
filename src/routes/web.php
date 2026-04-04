@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ContactController;
+use App\Http\Controllers\AuthController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -17,5 +18,10 @@ Route::get('/', function () {
     return view('welcome');
 });
 Route::get('/', [ContactController::class, 'index']);
-Route::get('/contact/confirm', [ContactController::class, 'confirm'])->name('contact.confirm');
-Route::post('/contact/confirm', [ContactController::class, 'confirm'])->name('contact.confirm');
+Route::post('/contacts/confirm', [ContactController::class, 'confirm']);
+Route::post('/contacts', [ContactController::class, 'store']);
+Route::middleware('auth')->group(function () {
+Route::get('/logout', [AuthController::class, 'index']);
+});
+Route::get('/delete', [ContactController::class, 'delete']);
+Route::post('/delete', [ContactController::class, 'remove']);

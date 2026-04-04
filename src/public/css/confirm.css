@@ -1,80 +1,142 @@
+/* =========================
+  ベース
+========================= */
 body {
-    font-family: "ヒラギノ角ゴシック", "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
-    background-color: #f7f5f2;
-    color: #6e6054;
-    margin: 0;
-    padding: 40px 0;
+    background: #f3f3f3;
+    font-family: "Hiragino Kaku Gothic ProN", sans-serif;
+    color: #6b5b4b;
+    letter-spacing: 0.05em;
+}
+
+/* =========================
+  ヘッダー
+========================= */
+.header {
+    background: #f3f3f3;
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.header__inner {
+    max-width: 1230px;
+    margin: 0 auto;
+    padding: 25px 0;
     text-align: center;
 }
 
-.container {
-    width: 600px;
-    margin: 0 auto;
+.header__logo {
+    font-size: 30px;
+    font-weight: 500;
+    color: #8b7969;
+    text-decoration: none;
 }
 
-h1 {
-    font-weight: normal;
-    margin-bottom: 20px;
-    color: #8b7d6b;
+/* =========================
+  コンテンツ枠
+========================= */
+.confirm__content {
+    max-width: 1000px;
+    margin: 60px auto;
+    padding: 50px 70px;
+    background: #f8f8f8;
+    border: 1px solid #e0e0e0;
 }
 
-h2 {
-    font-weight: normal;
-    margin-bottom: 40px;
-    color: #8b7d6b;
+/* =========================
+  タイトル
+========================= */
+.confirm__heading {
+    text-align: center;
+    margin-bottom: 50px;
 }
 
-table {
+.confirm__heading h2 {
+    font-size: 26px;
+    font-weight: 600;
+    color: #8b7969;
+}
+
+/* =========================
+  テーブル
+========================= */
+.confirm-table__inner {
     width: 100%;
     border-collapse: collapse;
-    margin-bottom: 30px;
+    border: 1px solid #e0e0e0;
 }
 
-th,
-td {
-    border: 1px solid #ddd3ca;
-    padding: 12px 15px;
-    vertical-align: top;
+.confirm-table__row {
+    height: 65px;
+    border-bottom: 1px solid #e0e0e0;
 }
 
-th {
-    background-color: #b2a590;
-    color: #fff;
-    text-align: left;
-    width: 150px;
-}
-
-td {
-    background-color: #fff;
-    color: #6e6054;
-}
-
-.btn-submit,
-.btn-edit {
-    background-color: #b2a590;
-    color: #fff;
-    border: none;
-    padding: 10px 25px;
+/* 左カラム */
+.confirm-table__header {
+    width: 32%;
+    background: #b7a999;
+    color: #ffffff;
+    padding: 0 25px;
     font-size: 14px;
-    cursor: pointer;
-    margin-right: 10px;
-    text-decoration: none;
-    border-radius: 3px;
-    display: inline-block;
+    font-weight: 500;
+    text-align: left;
+    vertical-align: middle;
 }
 
-.btn-edit {
-    background-color: transparent;
-    color: #6e6054;
+/* 右カラム */
+.confirm-table__text {
+    width: 68%;
+    background: #ffffff;
+    padding: 0 25px;
+    vertical-align: middle;
+}
+
+/* 入力欄を表示専用に */
+.confirm-table__text input {
+    width: 100%;
     border: none;
-    text-decoration: underline;
+    background: transparent;
+    font-size: 14px;
+    color: #6b5b4b;
+    outline: none;
+    pointer-events: none;
+}
+
+/* 最後の行（問い合わせ内容）は高さ大きく */
+.confirm-table__row:last-child {
+    height: 120px;
+}
+
+.confirm-table__row:last-child .confirm-table__text input {
+    line-height: 1.6;
+}
+
+/* =========================
+  ボタン
+========================= */
+.form__button {
+    text-align: center;
+    margin-top: 50px;
+}
+
+/* 送信ボタン */
+.form__button-submit {
+    width: 120px;
+    height: 40px;
+    background: #8b7969;
+    color: #fff;
+    border: none;
+    font-size: 14px;
+    margin: 0 10px;
     cursor: pointer;
 }
 
-.btn-submit:hover {
-    background-color: #8b7d6b;
+/* 修正ボタン */
+.form__button-submit:last-child {
+    background: transparent;
+    color: #8b7969;
+    border: 1px solid #8b7969;
 }
 
-.btn-edit:hover {
-    color: #8b7d6b;
+/* ホバー */
+.form__button-submit:hover {
+    opacity: 0.85;
 }
