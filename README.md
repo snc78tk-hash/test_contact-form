@@ -7,7 +7,7 @@ Dockerビルド
 Laravel環境
 ・docker compose exec php bash
 ・composer install
-・cp .env.example.env
+・cp .env.example
 ・php artisan key:generate
 ・php artisan migrate
 ・php artisan db.seed
